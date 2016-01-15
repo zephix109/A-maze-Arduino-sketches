@@ -1,4 +1,10 @@
-/* Typical RFID pin layout used:
+/* Laser_grid_RFID.ino
+ *
+ * This program controls the receivers for 4 lasers and alters an LED countdown timer with penalties when the laser beams are broken.
+ * The LED timer will slowly countdown until it reaches 0 at which point the RFID scanner begins to watch for the correct card.
+ * Once the correct card is scanned, the relay controlling 12V magnets that hold the exit door shut are turned off allowing the door to be opened.
+ *
+ * Typical RFID pin layout used:
  * -----------------------------------------------------------------------------------------
  *             MFRC522      Arduino       Arduino   Arduino    Arduino          Arduino
  *             Reader/PCD   Uno           Mega      Nano v3    Leonardo/Micro   Pro Micro
