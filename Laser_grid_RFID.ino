@@ -28,8 +28,6 @@ int Relay4 = 4; //pins that control relays
 //Code for audio output
 #define AUD1 40
 
-                                        //TO ADD NEW RFID CARD - Add a new line under this comment with the template (const String 'codename' = "card_number_From_RFID_reader";)
-                                        //Find large comment near the bottom of code with **********************************
 const String CODE = "12980212209";
 const String CODE2 = "3189169172";
 const String CODE3 = "20665490";
@@ -189,10 +187,7 @@ void validateCard(byte *buffer, byte bufferSize){
         codeCheck += buffer[i];
     }
     Serial.println(codeCheck);
-                                      //**************************************************
-                                      //Insert new (codeCheck == 'codename' ||) at the beginning of the statement below.
-                                      //Press the check button at the top left of the screen to compile and see if there are errors
-                                      //If there are no errors, upload the code to the Arduino
+  
     if(codeCheck == CODE || codeCheck == CODE2 || codeCheck == CODE3 || codeCheck == CODE4 || codeCheck == CODE5 || codeCheck == CODE6 || codeCheck == CODE7 || codeCheck == CODE8 || codeCheck == THEONECODE){
       digitalWrite(LEDGREEN, HIGH);
       digitalWrite(LEDRED, LOW);
